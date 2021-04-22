@@ -1,0 +1,1 @@
+keep facenet_keras.h5 model file in models directory
