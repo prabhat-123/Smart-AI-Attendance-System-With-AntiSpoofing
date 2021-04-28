@@ -82,9 +82,9 @@ def send_mail():
         print("Attendance for absent staffs has been recorded successfully")
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
-    server.login('srv.ale52@gmail.com','prabhat9811956469')
+    server.login('enter your gmail(sender_mail)','enter your password(sender_password)')
     for email in absent_staff_emails:
-        server.sendmail('srv.ale52@gmail.com',
+        server.sendmail('enter your gmail(sender_mail)',
                     email,
                     'You are absent')
     print("Email sent successfully")
