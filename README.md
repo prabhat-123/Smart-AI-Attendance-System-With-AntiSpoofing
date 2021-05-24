@@ -54,7 +54,7 @@ For installing virtual environment on Anaconda Prompt(Windows):
   
   
         cd /*location to the repository */
-        e.g cd E:/Attendance_system_using_face_recognition/ (location to the repository in local computer)
+        e.g cd E:/Smart-AI-Attendance-System-With-AntiSpoofing/ (location to the repository in local computer)
   
   
  ##### iii) After changing the working directory to the current repository/project create a virtual environment by using the following commands:
@@ -74,7 +74,7 @@ For installing virtual environment on Anaconda Prompt(Windows):
      conda create -n "your virtual environment name" python=3.6 (The code is tested and implemented in 3.6 so install python 3.6)
      e.g.
      
-     conda create -n facialrecognition python=3.6
+     conda create -n sams python=3.6
      
      
      
@@ -98,63 +98,14 @@ For installing virtual environment on Anaconda Prompt(Windows):
    
      e.g 
    
-     conda activate facialrecognition
+     conda activate sams
    
 
 #### v) Now you need to install all the requirements and dependencies for running this project.
+       
+       pip install -r requirements.txt
 
-
-  ###### Install the dependencies by seeing the install_requirements.txt file.
+  ###### Install the dependencies by seeing the requirements.txt file.
   
 ### Note: The project will not work if the version of python is different. And try installing all the dependencies by following the above instructions if it does not work.
 
-#### vi) After installation change the working directory to models/retinaface by using the following command:
-          
-           cd models/retinaface
-           
-           Then run the following commands to execute each script in the following                  order:
-           
-           python box_utils.py
-           
-           python config.py
-           
-           python mobilev1.py
-           
-           python prior_box.py
-           
-           python py_cpu_nms.py
-           
-           python retinaface.py
-           
-           And finally run the face detection model by running:
-           
-           python detect.py
-           
-###### After running detect.py, the script will open the web camera and load the retinaface detector pretrained weights. The user is asked to input their name... Input your name and the script will capture your 100 images and store the images in dataset/name folder.
-
-## The output will look like this:
-[![Video](face_detector.gif)](https://www.youtube.com/watch?v=0AnN6nQ6QMg)
-           
-
-#### vii) Then again goto the main directory by using the command:
-           
-           cd .. 
-           (two times)
-           
- #### viii) Now after the face has been detected and the output has been stored in dataset/input_name folder now extract the embeddings for the face by running the following command:
- 
-              python extractEmbeddings.py
-              
-###### Note: This will take some time to extract the embeddings of your dataset..
-
-#### ix) Train the model(after extracting embeddings) by running the following command:
-
-              python trainModel.py
-  
- #### x) After training the model, finally use the trained models to recognize the face (who you are?) by running the command:
- 
-              python recognize.py
-              
-              
-#### Output Demo: 
-[![Video](face_recognition_video.gif)](https://www.youtube.com/watch?v=RWLD1y1FTbw)
