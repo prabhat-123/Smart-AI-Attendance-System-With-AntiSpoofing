@@ -34,6 +34,8 @@ For installing virtual environment on command prompt and visual studio terminal:
    
       python -m pip install --user virtualenv
       
+    
+      
 ##### Recommended
 For installing virtual environment on Anaconda Prompt(Windows):
 
@@ -108,4 +110,4 @@ For installing virtual environment on Anaconda Prompt(Windows):
   ###### Install the dependencies by seeing the requirements.txt file.
   
 ### Note: The project will not work if the version of python is different. And try installing all the dependencies by following the above instructions if it does not work.
-
+ ### Finally run attendance_with_antispoofing.py to run the app..
