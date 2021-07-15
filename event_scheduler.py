@@ -116,9 +116,9 @@ def send_mail():
 
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
-    server.login('srv.ale52@gmail.com','agmaaeocvkmbfwvx')
+    server.login('enter your mail','enter your password')
     for email in absent_staff_emails:
-        server.sendmail('srv.ale52@gmail.com',
+        server.sendmail('enter your mail',
                     email,
                     'You are absent')
 
@@ -127,7 +127,7 @@ def send_mail():
     manager_email = get_manager_email()
     msg = EmailMessage()
     msg['Subject'] = 'Attendance Details'
-    msg['From'] = 'srv.ale52@gmail.com'
+    msg['From'] = 'enter your email'
     msg['To'] = manager_email
     msg.set_content('Attendance Report Attached')
 
@@ -141,7 +141,7 @@ def send_mail():
     msg.add_attachment(file_data,maintype='file',subtype=file_type,filename=file_name)
 
     with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
-        smtp.login('srv.ale52@gmail.com','agmaaeocvkmbfwvx')
+        smtp.login('enter your email','enter your password')
         smtp.send_message(msg)
 
     print("Report sent successfully")
